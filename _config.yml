@@ -1,0 +1,20 @@
+# Site settings
+name: My Blog
+email: 719880851@qq.com
+author: Elvis Liu
+github: https://github.com/elvisliu1994/
+baseurl: "/blog"
+motto: Talk is cheap<br/>show me the code.
+
+#permalink: /:categories/:year/:month/:day/:title/
+permalink: /:year/:month/:day/:title/
+#permalink: /:categories/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: elvisliu1994
+
+# Build settings
+markdown: kramdown
+

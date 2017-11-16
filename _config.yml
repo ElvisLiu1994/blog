@@ -7,8 +7,8 @@ baseurl: "/blog"
 motto: Talk is cheap<br/>show me the code.
 
 #permalink: /:categories/:year/:month/:day/:title/
-permalink: /:year/:month/:day/:title/
-#permalink: /:categories/:title/
+#permalink: /:year/:month/:day/:title/
+permalink: /:categories/:title/
 paginate: 10
 
 exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']

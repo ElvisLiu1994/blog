@@ -1,22 +1,30 @@
 <header class="navbar navbar-inverse navbar-fixed-top docs-nav" role="banner">
-  <div class="container">
-    <div class="navbar-header">
-      <a href="/" class="navbar-brand">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-brand">
         <img src="{{ '/styles/images/logo.jpg' | prepend: site.baseurl }}">
       </a>
+        </div>
+        <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
+                </li>
+                <li>
+                    <a rel="nofollow" href="{{ '/books' | prepend: site.baseurl }}">Books</a>
+                </li>
+                <li>
+                    <a rel="nofollow" target="_blank" href="{{site.github}}">Github</a>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <div class="col-md-12 col-sm-12 col-xs-12 searchcontrol" id="js-search">
+                        <input class="form-control" type="text" id="js-search__input" placeholder="Search">
+                        <ul class="search__results" id="js-search__results"></ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
     </div>
-    <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
-      <ul class="nav navbar-nav">    
-        <li>
-          <a href="{{ '/' | prepend: site.baseurl }}">Home</a>
-        </li> 
-        <li>
-          <a rel="nofollow" href="{{ '/books' | prepend: site.baseurl }}">Books</a>
-        </li>
-        <li>
-          <a rel="nofollow" target="_blank" href="{{site.github}}">Github</a>
-        </li>
-      </ul>
-    </nav>
-  </div>
 </header>

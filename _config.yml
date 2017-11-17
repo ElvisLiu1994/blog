@@ -6,6 +6,8 @@ github: https://github.com/elvisliu1994/
 baseurl: "/blog"
 motto: Talk is cheap<br/>show me the code.
 
+allowsearch: true
+
 #permalink: /:categories/:year/:month/:day/:title/
 #permalink: /:year/:month/:day/:title/
 permalink: /:categories/:title/

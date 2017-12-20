@@ -1,9 +1,9 @@
 ---
 layout: post
-title:  108 Converted Sorted Array To Binary Search Tree
-date:   2017-12-20
+title: Convert Sorted Array to Binary Search Tree
+date: 2017-12-20
 category: LeetCode
-tag: algorithm BST
+tag: algorithm
 ---
 
 * content
@@ -30,16 +30,15 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
    -3   9
    /   /
  -10  5
-*
-*/  
-
+ *
+ */
 public class _108_ConvertSortedArrayToBST {
 	
-	  /*
-	   * 首先考虑使用递归的方法，将中间的结点作为根结点，然后递归地创建左子树和右子树
-	   * 
-	   * 移位去处>>比加号+的优先级低，一开始没有加nums.length>>1的括号，导致无限递归，堆栈溢出
-	   */
+	/*
+	 * 首先考虑使用递归的方法，将中间的结点作为根结点，然后递归地创建左子树和右子树
+	 * 
+	 * 移位去处>>比加号+的优先级低，一开始没有加nums.length>>1的括号，导致无限递归，堆栈溢出
+	 */
     public static TreeNode sortedArrayToBST(int[] nums) {
     	
         if(nums == null || nums.length == 0) return null;
@@ -73,9 +72,9 @@ public class _108_ConvertSortedArrayToBST {
     		return root;
     }
 
-    public static void main(String[] args) {
-		    sortedArrayToBST(new int[] {-10,-3,0,5,9});
-    }
+	public static void main(String[] args) {
+		sortedArrayToBST(new int[] {-10,-3,0,5,9});
+	}
 
 }
 ```

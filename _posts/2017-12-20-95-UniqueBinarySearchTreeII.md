@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Unique Binary Search Trees II   
+title: 95. Unique Binary Search Trees II   
 date: 2017-12-20
 category: LeetCode
 tag: algorithm
@@ -29,47 +29,47 @@ Given n = 3, your program should return all 5 unique BST's shown below.
  *
  */
 public class _95_UniqueBinarySearchTreeII {
-	
-	public static List<TreeNode> generateTrees(int n) {
-		
-		if(n == 0) return new ArrayList<TreeNode>();
-		
-		List<TreeNode> res = generate(1,n);
-		
-		return res;
-	}
-	// 利用96题中递归的思想
-	private static List<TreeNode> generate(int start, int end) {
-		
-		List<TreeNode> res = new ArrayList<TreeNode>();
-		
-		if(start > end) {
-			res.add(null);
-			return res;
-		}
-		
-		List<TreeNode> left, right;
-		for(int i = start; i <= end; i++) {
-			left = generate(start,i-1);
-			right = generate(i+1,end);
-			
-			for(TreeNode lnode : left) {
-				for(TreeNode rnode : right) {
-					TreeNode root = new TreeNode(i);
-					root.left = lnode;
-					root.right = rnode;
-					res.add(root);
-				}
-			}
-		}
-		
-		return res;
-	}
+    
+    public static List<TreeNode> generateTrees(int n) {
+        
+        if(n == 0) return new ArrayList<TreeNode>();
+        
+        List<TreeNode> res = generate(1,n);
+        
+        return res;
+    }
+    // 利用96题中递归的思想
+    private static List<TreeNode> generate(int start, int end) {
+        
+        List<TreeNode> res = new ArrayList<TreeNode>();
+        
+        if(start > end) {
+            res.add(null);
+            return res;
+        }
+        
+        List<TreeNode> left, right;
+        for(int i = start; i <= end; i++) {
+            left = generate(start,i-1);
+            right = generate(i+1,end);
+            
+            for(TreeNode lnode : left) {
+                for(TreeNode rnode : right) {
+                    TreeNode root = new TreeNode(i);
+                    root.left = lnode;
+                    root.right = rnode;
+                    res.add(root);
+                }
+            }
+        }
+        
+        return res;
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }
 ```

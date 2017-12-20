@@ -1,6 +1,7 @@
 ---
 layout: post
-title: Convert Sorted List to Binary Search Tree   date: 2017-12-20
+title: 109. Convert Sorted List to Binary Search Tree   
+date: 2017-12-20
 category: LeetCode
 tag: algorithm
 ---
@@ -31,17 +32,20 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
  */
 
 public class _109_ConvertSortedListToBST {
-	
-	public static TreeNode sortedListToBST(ListNode head) {
-		if(head == null) return null;
-		
-		
-	}
+    
+    /*
+     * 首先想到的办法就是将
+     */
+    public static TreeNode sortedListToBST(ListNode head) {
+        if(head == null) return null;
+        
+        
+    }
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+    public static void main(String[] args) {
+        // TODO Auto-generated method stub
 
-	}
+    }
 
 }
 ```

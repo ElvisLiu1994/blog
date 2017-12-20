@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Length of Last Word   		
+title: 58. Length of Last Word           
 date: 2017-12-20
 category: LeetCode
 tag: algorithm
@@ -25,15 +25,15 @@ return 5.
  *
  */
 public class _58_LenOfLastWord {
-	
+    
     public int lengthOfLastWord(String s) {
-    	
-    	if(s == null || s.length() == 0) return 0;
-    	
-    	int len = 0;
+        
+        if(s == null || s.length() == 0) return 0;
+        
+        int len = 0;
         String[] ss = s.split(" ");
         if(ss.length != 0)
-        	len = ss[ss.length-1].length();
+            len = ss[ss.length-1].length();
         return len;
     }
     
@@ -42,21 +42,21 @@ public class _58_LenOfLastWord {
     }
     
     public int lengthOfLastWord2(String s) {
-    	int len = s.length(), lastLen = 0;
-    	char[] cs = s.toCharArray();
-    	while(len > 0 && cs[len-1] == ' ')
-    		len--;
-    	while(len > 0 && cs[len-1] != ' '){
-    		lastLen++;
-    		len--;
-    	}
-    	return lastLen;
+        int len = s.length(), lastLen = 0;
+        char[] cs = s.toCharArray();
+        while(len > 0 && cs[len-1] == ' ')
+            len--;
+        while(len > 0 && cs[len-1] != ' '){
+            lastLen++;
+            len--;
+        }
+        return lastLen;
     }
 
-	public static void main(String[] args) {
-		_58_LenOfLastWord test = new _58_LenOfLastWord();
-		System.out.println(" ".split(" ").length);
-	}
+    public static void main(String[] args) {
+        _58_LenOfLastWord test = new _58_LenOfLastWord();
+        System.out.println(" ".split(" ").length);
+    }
 
 }
 ```

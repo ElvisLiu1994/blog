@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Remove Duplicates from Sorted Array  
+title: 26. Remove Duplicates from Sorted Array  
 date: 2017-12-20
 category: LeetCode
 tag: algorithm
@@ -25,23 +25,23 @@ Your function should return length = 2, with the first two elements of nums bein
  */
 public class _26_RemoveDuplicates {
 
-	public int removeDuplicates(int[] nums){
-		if(nums == null) return 0;
-		
-		int index = 0;
-		for(int i = 1; i < nums.length; i++){
-			if(nums[i] != nums[index]){
-				nums[++index] = nums[i];
-			}
-		}
-		return index+1;
-	}
-	
-	public static void main(String[] args) {
-		_26_RemoveDuplicates test = new _26_RemoveDuplicates();
-		int[] nums = {1,1,2,2,3,3};
-		System.out.println(test.removeDuplicates(nums));
-	}
+    public int removeDuplicates(int[] nums){
+        if(nums == null) return 0;
+        
+        int index = 0;
+        for(int i = 1; i < nums.length; i++){
+            if(nums[i] != nums[index]){
+                nums[++index] = nums[i];
+            }
+        }
+        return index+1;
+    }
+    
+    public static void main(String[] args) {
+        _26_RemoveDuplicates test = new _26_RemoveDuplicates();
+        int[] nums = {1,1,2,2,3,3};
+        System.out.println(test.removeDuplicates(nums));
+    }
 
 }
 ```

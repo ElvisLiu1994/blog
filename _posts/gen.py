@@ -21,7 +21,7 @@ for x in os.listdir("."):
 
 		with open('/Users/liujing/Documents/github/blog/_posts/2017-12-20-'+num+'-'+name+'.md', 'w') as f:
 
-			lines[2] = 'title: '+titles[int(num)-1]
+			lines[2] = 'title: '+num+'. '+titles[int(num)-1]
 			f.writelines(lines)
 			f.writelines(txt)
 			f.write('```\n')

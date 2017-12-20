@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Simplify Path   		
+title: 71. Simplify Path           
 date: 2017-12-20
 category: LeetCode
 tag: algorithm
@@ -30,40 +30,40 @@ In this case, you should ignore redundant slashes and return "/home/foo".
  *
  */
 public class _71_SimplifyPath {
-	
-	public String simplifyPath(String path){
-		
-		StringBuilder sb = new StringBuilder();
-		
-		String[] splits = path.split("/");
-		String[] stack = new String[splits.length];
-		int top = 0;
-		
-		for(String s : splits){
-			
-			if(s.length() == 0 || s.equals(".")){
-				continue;
-			}else if(s.equals("..")){
-				top = (top == 0 ? 0 : top-1);
-			}else{
-				stack[top++] = s;
-			}
-				
-		}
-		
-		if(top == 0) return "/";
-		
-		for(int i = 0; i < top; i++){
-			sb.append("/" + stack[i]);
-		}
-		
-		return sb.toString();
-	}
+    
+    public String simplifyPath(String path){
+        
+        StringBuilder sb = new StringBuilder();
+        
+        String[] splits = path.split("/");
+        String[] stack = new String[splits.length];
+        int top = 0;
+        
+        for(String s : splits){
+            
+            if(s.length() == 0 || s.equals(".")){
+                continue;
+            }else if(s.equals("..")){
+                top = (top == 0 ? 0 : top-1);
+            }else{
+                stack[top++] = s;
+            }
+                
+        }
+        
+        if(top == 0) return "/";
+        
+        for(int i = 0; i < top; i++){
+            sb.append("/" + stack[i]);
+        }
+        
+        return sb.toString();
+    }
 
-	public static void main(String[] args) {
-		_71_SimplifyPath test = new _71_SimplifyPath();
-		System.out.println(test.simplifyPath("/home//foo"));
-	}
+    public static void main(String[] args) {
+        _71_SimplifyPath test = new _71_SimplifyPath();
+        System.out.println(test.simplifyPath("/home//foo"));
+    }
 
 }
 ```

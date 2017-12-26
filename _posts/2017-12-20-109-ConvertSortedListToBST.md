@@ -38,9 +38,9 @@ public class _109_ConvertSortedListToBST {
      */
     public static TreeNode sortedListToBST(ListNode head) {
         if(head == null) return null;
-    
-      return solve(head, null);
-   }
+        // 这里的tail使用null,表示是一个左闭右开的区间，这样做的好处是不用通过遍历的方式寻找链表的尾节点
+        return solve(head, null);
+    }
   
     public static TreeNode solve(ListNode head, ListNode tail) {
         ListNode slow = head;

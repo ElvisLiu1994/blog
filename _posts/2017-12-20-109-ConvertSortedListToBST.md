@@ -34,12 +34,27 @@ One possible answer is: [0,-3,9,-10,null,5], which represents the following heig
 public class _109_ConvertSortedListToBST {
     
     /*
-     * 首先想到的办法就是将
+     * 通过双指针法可以找到链表的中间节点
      */
     public static TreeNode sortedListToBST(ListNode head) {
         if(head == null) return null;
-        
-        
+    
+      return solve(head, null);
+   }
+  
+    public static TreeNode solve(ListNode head, ListNode tail) {
+        ListNode slow = head;
+        ListNode fast = head;
+        if(head == tail) return null;
+      
+        while(fast != tail && fast.next != tail) {
+            fast = fast.next.next;
+            slow = slow.next;
+        }
+        TreeNode tmp = new TreeNode(slow.val);
+        tmp.left = solve(head,slow);
+        tmp.right = solve(slow.next,tail);
+        return tmp;
     }
 
     public static void main(String[] args) {
